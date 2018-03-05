@@ -1,14 +1,21 @@
+package jastajas.ZadDomowe16;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BlindsController {
     WeatherStation weatherStation;
     boolean opendBlinds;
 
+    @Autowired
     public BlindsController(WeatherStation weatherStation) {
         this.weatherStation = weatherStation;
     }
 
     public void setWindowBlinds(){
         String sunStatus = "";
-        if (weatherStation.getWeatherDescription() != "słonecznie"){
+        if (!weatherStation.getWeatherDescription().equals("słonecznie")){
             openBlinds();
             sunStatus = "Nie ma słońca.";
         } else {

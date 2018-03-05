@@ -1,3 +1,5 @@
+import jastajas.ZadDomowe16.ConfigApp;
+import jastajas.ZadDomowe16.SmartHome;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

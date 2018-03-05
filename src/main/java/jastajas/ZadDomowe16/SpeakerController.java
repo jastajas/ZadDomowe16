@@ -1,14 +1,21 @@
+package jastajas.ZadDomowe16;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class SpeakerController {
 
     public WeatherStation weatherStation;
 
+    @Autowired
     public SpeakerController(WeatherStation weatherStation) {
         this.weatherStation = weatherStation;
     }
 
     public void inform(){
         String wish="dobry";
-        if (weatherStation.getWeatherDescription() != "słonecznie"){
+        if (!weatherStation.getWeatherDescription().equals("słonecznie")){
             wish = "ponury";
         }
 

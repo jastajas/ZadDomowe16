@@ -1,5 +1,10 @@
+package jastajas.ZadDomowe16;
+
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
+@Component
 public class WeatherStation {
     private Random rnd;
     private int temp;
@@ -7,7 +12,8 @@ public class WeatherStation {
 
     public WeatherStation(){
         rnd = new Random();
-        temp = rnd.nextInt(35) * (rnd.nextBoolean()? -1: 1);
+        //temp = rnd.nextInt(35) * (rnd.nextBoolean()? -1: 1);
+        temp = rnd.nextInt(60) - 25;
         weatherDescription = rnd.nextInt(3);
         System.out.println("Stacja pogodowa pobiera informacje o temperaturze.");
     }

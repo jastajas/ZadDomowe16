@@ -1,3 +1,5 @@
+package jastajas.ZadDomowe16;
+
 public enum WeatherDescription {
     SUN("słonecznie"),
     CLOUDS("pochmurnie"),

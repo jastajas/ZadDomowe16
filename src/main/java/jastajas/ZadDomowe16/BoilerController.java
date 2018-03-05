@@ -1,8 +1,15 @@
+package jastajas.ZadDomowe16;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BoilerController {
 
     private WeatherStation weatherStation;
     private boolean boilerPower;
 
+    @Autowired
     public BoilerController(WeatherStation weatherStation) {
         this.weatherStation = weatherStation;
     }
